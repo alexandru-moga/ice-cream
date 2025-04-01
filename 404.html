@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Ice Cream Paradise</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Force dark mode */
+        :root {
+            --background: #121212;
+            --text: #e9fff9;
+            --light-text: #a0c4ff;
+            --white: #1e1e1e;
+            --light-gray: #2a2a2a;
+        }
+        
+        .error-container {
+            text-align: center;
+            padding: 3rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .error-image {
+            max-width: 300px;
+            margin: 0 auto 2rem;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .error-message {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .melting {
+            animation: melt 3s ease-in-out infinite;
+        }
+        
+        @keyframes melt {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(0.95) translateY(10px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Oops! Page Not Found</h1>
+        <p class="subtitle">Looks like this scoop has melted away</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="flavors.html">Flavors</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="error-container">
+            <div class="error-image melting">
+                <img src="https://blog.modernistpantry.com/wp-content/uploads/2020/06/shutterstock_220024564-1.jpg" alt="Melting ice cream">
+            </div>
+            <div class="error-code">404</div>
+            <div class="error-message">The page you're looking for has melted away!</div>
+            <p>Don't worry, we have plenty of other delicious pages for you to explore.</p>
+            <a href="index.html" class="btn">Return to Home</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="flavors.html">Flavors</a>
+                <a href="history.html">History</a>
+                <a href="recipes.html">Recipes</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Ice Cream Paradise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
