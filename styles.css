@@ -1,0 +1,599 @@
+/* Base Styles and Variables using CSS Custom Properties */
+:root {
+    --primary: #ff5470;
+    --secondary: #ff9770;
+    --accent: #ffd670;
+    --background: #e9fff9;
+    --text: #03045e;
+    --light-text: #4361ee;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    
+    /* Container query base unit */
+    container-type: inline-size;
+  }
+  
+  /* Global Reset and Box Sizing */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    width: min(95%, 1200px);
+    margin-inline: auto;
+    padding: clamp(1rem, 5vw, 2rem);
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    display: block;
+  }
+  
+  /* Modern Typography with Responsive Sizing */
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    line-height: 1.3;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+  }
+  
+  /* Modern Link Styling */
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+  }
+  
+  a:hover {
+    color: var(--secondary);
+  }
+  
+  a:not(nav a, .btn, .social-icon, .back-to-top):after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--secondary);
+    transition: width 0.3s ease;
+  }
+  
+  a:not(nav a, .btn, .social-icon, .back-to-top):hover:after {
+    width: 100%;
+  }
+  
+  /* Header with Modern Gradient */
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    text-align: center;
+    padding: clamp(2rem, 10vh, 3rem) 1rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.2), transparent 70%);
+    z-index: 1;
+  }
+  
+  header > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    margin-top: 0.5rem;
+    opacity: 0.9;
+  }
+  
+  /* Modern Sticky Navigation */
+  nav {
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.5rem;
+  }
+  
+  nav li {
+    position: relative;
+  }
+  
+  nav a {
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1.2rem clamp(0.8rem, 3vw, 1.5rem);
+    transition: var(--transition);
+  }
+  
+  nav a:hover, nav a.active {
+    color: var(--primary);
+    background-color: rgba(255, 84, 112, 0.08);
+  }
+  
+  nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary);
+  }
+  
+  /* Section Styling with Modern Spacing */
+  section {
+    margin-bottom: clamp(3rem, 10vh, 5rem);
+    scroll-margin-top: 5rem;
+  }
+  
+  section h2 {
+    color: var(--primary);
+    margin-bottom: clamp(1.5rem, 5vh, 2.5rem);
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.8rem;
+  }
+  
+  section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(60px, 10%, 80px);
+    height: 4px;
+    background: conic-gradient(from 45deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+    border-radius: 2px;
+  }
+  
+  /* Modern Grid Layout for Recipes */
+  .recipe-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  @media (min-width: 768px) {
+    .recipe-card {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  
+  .recipe-image {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+  
+  .recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .recipe-card:hover .recipe-image img {
+    transform: scale(1.05);
+  }
+  
+  .recipe-details {
+    padding: clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  /* Recipe Meta Information */
+  .recipe-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .recipe-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-text);
+  }
+  
+  /* Ingredients and Instructions */
+  .ingredients, .instructions {
+    margin-bottom: 1.5rem;
+  }
+  
+  .ingredients h3, .instructions h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .ingredients ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .ingredients li {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .ingredients li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+  }
+  
+  .instructions ol {
+    counter-reset: item;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .instructions li {
+    counter-increment: item;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  
+  .instructions li::before {
+    content: counter(item);
+    background-color: var(--accent);
+    color: var(--text);
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Flavor Variations Grid */
+  .variation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .variation-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+  }
+  
+  .variation-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .variation-image {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
+  
+  .variation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .variation-card:hover .variation-image img {
+    transform: scale(1.05);
+  }
+  
+  .variation-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--primary);
+  }
+  
+  .variation-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Tips Section */
+  .tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .tip-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .tip-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tip-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tip-card h3 {
+    margin-bottom: 0.8rem;
+    color: var(--primary);
+  }
+  
+  /* Modern Footer */
+  footer {
+    background-color: var(--text);
+    color: var(--white);
+    padding: 3rem 1rem 1.5rem;
+    margin-top: 4rem;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-content {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
+  
+  .footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .footer-links a {
+    color: var(--white);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    opacity: 1;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background-color: var(--primary);
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+  
+  /* Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--primary);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 99;
+  }
+  
+  .back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .back-to-top:hover {
+    background-color: var(--secondary);
+    transform: translateY(-5px);
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--light-gray);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 6px;
+    border: 3px solid var(--light-gray);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
+  }
+  
+  /* Content Visibility for Performance */
+  .recipe-section:not(:first-of-type) {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 1000px;
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #121212;
+      --text: #e9fff9;
+      --light-text: #a0c4ff;
+      --white: #1e1e1e;
+      --light-gray: #2a2a2a;
+    }
+    
+    .recipe-card, .variation-card, .tip-card {
+      background-color: #252525;
+    }
+    
+    img {
+      filter: brightness(0.9);
+    }
+  }
+
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+  
+  th, td {
+    border: 1px solid var(--light-text);
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+  th {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+
+  
+/* Floating Ice Cream Truck */
+.ice-cream-truck {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    z-index: 99;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.ice-cream-truck img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.ice-cream-truck:hover {
+    transform: scale(1.1);
+}
+
+/* Animation for when the truck is clicked */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.bounce {
+    animation: bounce 1s ease;
+}
