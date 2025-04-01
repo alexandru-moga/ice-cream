@@ -6,22 +6,15 @@
     <title>Ice Cream Paradise</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
-    <!-- Ice Cream Truck Sound -->
 <audio id="iceCreamSound">
     <source src="/sounds/truck.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
-
-<!-- Floating Ice Cream Truck -->
 <div id="iceCreamTruck" class="ice-cream-truck">
     <img src="images/truck.png" alt="Ice Cream Truck">
 </div>
-
-<!-- Link to JavaScript file -->
 <script src="script.js"></script>
-
     <style>
-        /* Additional styles to maintain original layout while using styles.css */
         .card-container {
             display: flex;
             flex-wrap: wrap;
@@ -29,7 +22,6 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-        
         .card {
             background-color: var(--white);
             border-radius: var(--border-radius);
@@ -38,27 +30,22 @@
             box-shadow: var(--box-shadow);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
         }
-        
         .card-image {
             height: 200px;
             overflow: hidden;
         }
-        
         .card-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
         .card-content {
             padding: 1.5rem;
         }
-        
         .btn {
             display: inline-block;
             background-color: var(--accent);
@@ -69,13 +56,10 @@
             font-weight: bold;
             transition: background-color 0.3s ease;
         }
-        
         .btn:hover {
             background-color: var(--secondary);
             color: var(--white);
         }
-        
-        /* Force dark mode */
         :root {
             --background: #121212;
             --text: #e9fff9;
@@ -83,11 +67,9 @@
             --white: #1e1e1e;
             --light-gray: #2a2a2a;
         }
-        
         .card, .variation-card, .tip-card {
             background-color: #252525;
         }
-        
         img {
             filter: brightness(0.9);
         }
@@ -98,7 +80,6 @@
         <h1>Ice Cream Paradise</h1>
         <p class="subtitle">Your ultimate guide to everything ice cream!</p>
     </header>
-    
     <div class="container">
         <div class="card-container">
             <div class="card">
@@ -111,7 +92,6 @@
                     <a href="flavors.html" class="btn">Explore Flavors</a>
                 </div>
             </div>
-            
             <div class="card">
                 <div class="card-image">
                     <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,w_1920,h_960,g_auto/dpr_auto/f_auto/q_auto:eco/v1/gettyimages-953604950-2?_a=BAVAZGDX0" alt="Ice cream history">
@@ -122,7 +102,6 @@
                     <a href="history.html" class="btn">Discover History</a>
                 </div>
             </div>
-            
             <div class="card">
                 <div class="card-image">
                     <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FSeries%2F06-2020-skills-showdown-make-ice-cream-at-home%2Fice-cream-skills-inpost" alt="Homemade ice cream">
@@ -135,19 +114,14 @@
             </div>
         </div>
     </div>
-    
     <footer>
         <div class="copyright">
             <p>&copy; 2025 Ice Cream Paradise. All rights reserved.</p>
         </div>
     </footer>
-    
     <a href="#" class="back-to-top">↑</a>
-    
     <script>
-        // JavaScript for back-to-top button visibility
         const backToTopButton = document.querySelector('.back-to-top');
-        
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('visible');
@@ -155,7 +129,6 @@
                 backToTopButton.classList.remove('visible');
             }
         });
-        
         backToTopButton.addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -7,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Force dark mode */
         :root {
             --background: #121212;
             --text: #e9fff9;
@@ -15,25 +14,20 @@
             --white: #1e1e1e;
             --light-gray: #2a2a2a;
         }
-        
         .card, .variation-card, .tip-card, .timeline-item {
             background-color: #252525;
         }
-        
         img {
             filter: brightness(0.9);
         }
-        
         .timeline-container {
             margin-bottom: 3rem;
         }
-        
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 2rem auto;
         }
-        
         .timeline::after {
             content: '';
             position: absolute;
@@ -45,7 +39,6 @@
             margin-left: -3px;
             border-radius: 3px;
         }
-        
         .timeline-item {
             padding: 1.5rem;
             position: relative;
@@ -55,16 +48,13 @@
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
         }
-        
         .timeline-item:nth-child(odd) {
             left: 0;
         }
-        
         .timeline-item:nth-child(even) {
             left: 50%;
             margin-left: 40px;
         }
-        
         .timeline-date {
             background-color: var(--accent);
             color: var(--text);
@@ -74,47 +64,39 @@
             font-weight: bold;
             margin-bottom: 1rem;
         }
-        
         .timeline-content h3 {
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
-        
         .timeline-image {
             margin-top: 1rem;
             border-radius: var(--border-radius);
             overflow: hidden;
         }
-        
         .timeline-image img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
         .fun-facts {
             background-color: #252525;
             padding: 2rem;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
         }
-        
         .fun-facts h2 {
             color: var(--primary);
             text-align: center;
             margin-bottom: 1.5rem;
         }
-        
         .fun-facts ul {
             list-style-type: none;
         }
-        
         .fun-facts li {
             position: relative;
             padding-left: 1.5rem;
             margin-bottom: 0.8rem;
         }
-        
         .fun-facts li::before {
             content: "•";
             position: absolute;
@@ -122,17 +104,14 @@
             color: var(--accent);
             font-size: 1.2rem;
         }
-        
         @media screen and (max-width: 768px) {
             .timeline::after {
                 left: 31px;
             }
-            
             .timeline-item {
                 width: calc(100% - 80px);
                 margin-left: 80px;
             }
-            
             .timeline-item:nth-child(odd),
             .timeline-item:nth-child(even) {
                 left: 0;
@@ -145,7 +124,6 @@
         <h1>The Sweet History of Ice Cream</h1>
         <p class="subtitle">A journey through time exploring the evolution of our favorite frozen treat</p>
     </header>
-    
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -154,12 +132,10 @@
             <li><a href="recipes.html">Recipes</a></li>
         </ul>
     </nav>
-    
     <div class="container">
         <div class="timeline-container">
             <h2>A Journey Through Ice Cream History</h2>
             <p>Ice cream has been around for thousands of years, evolving from simple icy treats to the complex desserts we enjoy today. Let's explore this delicious journey through time!</p>
-            
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">Ancient Times (500 BC)</div>
@@ -171,7 +147,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">400 BC</div>
                     <div class="timeline-content">
@@ -179,7 +154,6 @@
                         <p>As early as 400 BC, Persians utilized underground spaces for storing ice cream, creating a frozen dessert legacy that would eventually spread throughout the world. Ancient Greeks also mixed snow with honey and fruit for sweet icy treats.</p>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1500s</div>
                     <div class="timeline-content">
@@ -190,7 +164,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1533</div>
                     <div class="timeline-content">
@@ -198,7 +171,6 @@
                         <p>Italian Catherine de'Medici married Henry II, the future King of France, bringing her chefs and iced desserts to France. For their wedding, the chefs made a different type of ice every day for a month! Her chefs may have been the first to use thick cream in the dessert.</p>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1565</div>
                     <div class="timeline-content">
@@ -209,7 +181,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1660s</div>
                     <div class="timeline-content">
@@ -217,7 +188,6 @@
                         <p>The first printed ice cream recipe in Europe appeared in the handwritten receipts of Lady Anne Fanshawe in 1665. Her recipe titled 'To make Icy Cream' suggested adding ambergris or orange-flower water, both fashionable ingredients at the time.</p>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1671</div>
                     <div class="timeline-content">
@@ -228,7 +198,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1686</div>
                     <div class="timeline-content">
@@ -236,7 +205,6 @@
                         <p>Francesco Procopio from Palermo, Italy, opened Café Procope, the first café in Paris and the first modern coffee shop. It also became the first Western place to offer ice cream to the general public.</p>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1784</div>
                     <div class="timeline-content">
@@ -247,7 +215,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1846</div>
                     <div class="timeline-content">
@@ -258,7 +225,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1851</div>
                     <div class="timeline-content">
@@ -266,7 +232,6 @@
                         <p>Jacob Fussell used icehouses to develop mass refrigeration and created the first ice cream "factory" for commercial production. He is called the "Father of the American Ice Cream Industry."</p>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1904</div>
                     <div class="timeline-content">
@@ -277,7 +242,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">1950s</div>
                     <div class="timeline-content">
@@ -288,7 +252,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="timeline-item">
                     <div class="timeline-date">Today (2025)</div>
                     <div class="timeline-content">
@@ -301,7 +264,6 @@
                 </div>
             </div>
         </div>
-        
         <div class="fun-facts">
             <h2>Fun Ice Cream Facts</h2>
             <ul>
@@ -315,7 +277,6 @@
             </ul>
         </div>
     </div>
-    
     <footer>
         <div class="footer-content">
             <div class="footer-links">
@@ -329,9 +290,7 @@
             </div>
         </div>
     </footer>
-    
     <a href="#" class="back-to-top">↑</a>
-    
     <script>
         const backToTopButton = document.querySelector('.back-to-top');
         window.addEventListener('scroll', () => {

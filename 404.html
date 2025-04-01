@@ -7,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Force dark mode */
         :root {
             --background: #121212;
             --text: #e9fff9;
@@ -15,19 +14,16 @@
             --white: #1e1e1e;
             --light-gray: #2a2a2a;
         }
-        
         .error-container {
             text-align: center;
             padding: 3rem 1rem;
             max-width: 800px;
             margin: 0 auto;
-        }
-        
+        } 
         .error-image {
             max-width: 300px;
             margin: 0 auto 2rem;
         }
-        
         .error-code {
             font-size: 8rem;
             font-weight: bold;
@@ -35,16 +31,13 @@
             line-height: 1;
             margin-bottom: 1rem;
         }
-        
         .error-message {
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
-        
         .melting {
             animation: melt 3s ease-in-out infinite;
         }
-        
         @keyframes melt {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(0.95) translateY(10px); }
@@ -56,7 +49,6 @@
         <h1>Oops! Page Not Found</h1>
         <p class="subtitle">Looks like this scoop has melted away</p>
     </header>
-    
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -65,7 +57,6 @@
             <li><a href="recipes.html">Recipes</a></li>
         </ul>
     </nav>
-    
     <div class="container">
         <div class="error-container">
             <div class="error-image melting">
@@ -77,7 +68,6 @@
             <a href="index.html" class="btn">Return to Home</a>
         </div>
     </div>
-    
     <footer>
         <div class="footer-content">
             <div class="footer-links">
@@ -91,7 +81,6 @@
             </div>
         </div>
     </footer>
-    
     <script src="script.js"></script>
 </body>
 </html>
